@@ -12,7 +12,7 @@ using MyApp.Data;
 namespace MyApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241001043120_InitialCreate")]
+    [Migration("20241002080253_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
