@@ -79,8 +79,8 @@ namespace MyApp.Application.Services.UserServices
         {
             //User iqueryable instead of Ienumerable---?d
             var candidates = await _candidate.GetAllAsync();
-            var userDetail = await _userDetails.GetAllAsync();
             var interview = await _interview.GetAllAsync();
+            var userDetail = await _userDetails.GetAllAsync();
 
 
             var data = (from c in candidates
