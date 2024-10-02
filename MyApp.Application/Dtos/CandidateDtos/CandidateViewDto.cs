@@ -20,12 +20,7 @@ namespace MyApp.Application.Dtos.CandidateDtos
         public List<InterviewGetDto> Interviews { get; set; } // Navigation property to interviews
 
         //UserDetails
-        public int UserDetailId { get; set; }
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
-        public int RoleId { get; set; }  // Roles: Candidate, Panellist, HR, Manager, Recruiter
-        public int CandidateId { get; set; }
-        public PanelistType PanellistType { get; set; }
+        public UserDetailGetDto UserDetail { get; set; }
 
         //Common
         public DateTime CreatedDate { get; set; }

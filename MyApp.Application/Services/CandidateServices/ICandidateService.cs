@@ -7,8 +7,8 @@ namespace MyApp.Application
     {
         Task<OperationHandler<IEnumerable<CandidateViewDto>>> GetAllAsync();
         Task<OperationHandler<CandidateViewDto>> GetByIdAsync(int id);
-        Task<OperationHandler<CreateUpdateCandidateDto>> AddAsync(CreateUpdateCandidateDto entity);
-        Task<OperationHandler<CreateUpdateCandidateDto>> UpdateAsync(CreateUpdateCandidateDto entity);
+        Task<OperationHandler<CandidateCreateDto>> AddAsync(CandidateCreateDto entity);
+        Task<OperationHandler<CandidateUpdateDto>> UpdateAsync(CandidateUpdateDto entity);
         Task<OperationHandler<Boolean>> DeleteAsync(int CandidateId);
     }
 }

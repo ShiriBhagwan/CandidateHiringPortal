@@ -43,8 +43,9 @@ namespace MyApp.Api.Controllers
 
         // PUT api/<InterviewController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(InterviewUpdateDto data)
+        public async Task<ActionResult> Put(InterviewUpdateDto data, int id)
         {
+            data.Id = id;
             await _interview.UpdateAsync(data);
             return Ok();
         }

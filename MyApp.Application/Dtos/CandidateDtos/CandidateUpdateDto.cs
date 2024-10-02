@@ -2,7 +2,7 @@
 
 namespace MyApp.Application.Dtos.CandidateDtos
 {
-    public class CreateUpdateCandidateDto
+    public class CandidateUpdateDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,17 +14,14 @@ namespace MyApp.Application.Dtos.CandidateDtos
 
 
         //UserDetails
-        public int UserDetailId { get; set; }
         public string Email { get; set; }
         public string PasswordHash { get; set; }
-        public int RoleId { get; set; }  // Roles: Candidate, Panellist, HR, Manager, Recruiter
-        public int CandidateId { get; set; }
-        public PanelistType PanellistType { get; set; }
+        public int RoleId { get; set; } = Convert.ToInt32(PanelistType.Candidate);// Roles: Candidate, Panellist, HR, Manager, Recruiter
+        public PanelistType PanellistType { get; set; } = PanelistType.Candidate;
 
         //Common
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public bool IsDeleted { get; set; }
-
     }
 }
